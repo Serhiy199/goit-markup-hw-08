@@ -1,0 +1,64 @@
+.team {
+    background-color: #f5f4fa;
+}
+
+.commands {
+    display: flex;
+    flex-basis: calc(100% - 120px) / 4;
+}
+
+.commands-list__section {
+    padding: 30px 32px 30px 32px;
+}
+
+.commands-list {
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    &:not(:nth-child(4n)) {
+        margin-right: 30px;
+    }
+}
+
+.commands-list__name {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    text-decoration: none;
+}
+
+.commands-list__position {
+    padding-top: 10px;
+
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.social__link {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: #afb1b8;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,
+    &:focus {
+        fill: #ffffff;
+        background-color: var(--accent-color);
+    }
+}
