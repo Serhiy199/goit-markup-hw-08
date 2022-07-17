@@ -1,5 +1,4 @@
 .container {
-    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -7,6 +6,22 @@
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section-title {
+    margin-bottom: 30px;
+
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+    .section-title {
+        font-size: 36px;
+    }
 }

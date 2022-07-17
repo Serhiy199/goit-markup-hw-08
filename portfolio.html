@@ -18,14 +18,18 @@
     <header>
         <div class="container heder-container">
             <nav class="navigation">
-                <a href="./index.html" lang="en" class="navigation-logo"><span
-                        class="navigation-logo_link">Web</span>Studio</a>
+                <a href="./index.html" lang="en" class="navigation-logo"><span class="navigation-logo_link">Web</span>Studio</a>
                 <ul class="nav list">
                     <li class="nav-item"><a href="./index.html" class="nav-link">Студія</a></li>
-                    <li class="nav-item"><a href="./portfolio.html" class="nav-link current button-border">Портфоліо</a></li>
+                    <li class="nav-item"><a href="./portfolio.html" class="nav-link current button-border tablet-color">Портфоліо</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Контакти</a></li>
                 </ul>
             </nav>
+            <button type="button" class="mob-nav-btn" menu-button-open>
+                <svg class="mob-nav-btn__icon" width="40" height="40">
+                    <use href="./images/icons.svg.svg#mob-icon-menu"></use>
+                </svg>
+            </button>
             <div class="contacts">
                 <a href="e-mail:info@devstudio.com" class="cont-mail">
                     <svg class="contacts-svg" width="16px" height="12px">
@@ -39,10 +43,36 @@
                     +38 096 111 11 11</a>
             </div>
         </div>
+        <div class="menu" mob-modal>
+            <div class="mobile-menu mob-comtainet">
+                <button type="button" class="mobile-menu__btn" menu-button-close>
+                    <svg class="mobile-menu__icon" width="40px" height="40px">
+                        <use href="/images/icons.svg.svg#mob-icon-close"></use>
+                    </svg>
+                </button>
+                <ul class="mob-nav list">
+                    <li class="mob-nav__item"><a href="./index.html" class="mob-nav__link">Студія</a></li>
+                    <li class="mob-nav__item"><a href="./portfolio.html" class="mob-nav__link mob-current mob-button-border">Портфоліо</a></li>
+                    <li class="mob-nav__item"><a href="" class="mob-nav__link">Контакти</a></li>
+                </ul>
+                <div class="mob-contacts-tel">
+                    <a href="tel:+380961111111" class="mob-contacts-tel__ling">+38 096 111 11 11</a>
+                </div>
+                <div class="mob-contacts-mail">
+                    <a href="e-mail:info@devstudio.com" class="mob-contacts-mail__ling">info@devstudio.com</a>
+                </div>
+                <ul class="mob-social">
+                    <li class="mob-social__list"><a href="" class="mob-social__ling">Instagram</a></li>
+                    <li class="mob-social__list"><a href="" class="mob-social__ling">Twitter</a></li>
+                    <li class="mob-social__list"><a href="" class="mob-social__ling">Facebook</a></li>
+                    <li class="mob-social__list"><a href="" class="mob-social__ling">LinkedIn</a></li>
+                </ul>
+            </div>    
+        </div>
     </header>
     <main>
-        <section class="portfolio section">
-            <div class="container">
+        <section class="portfolio">
+            <div class="portfolio-container">
                 <h1 class="visually-hidden">Портфоліо</h1>
                     <ul class="portfolio-list list">
                         <li class="list-button"><button type="button" class="portfolio-button current">Все</button></li>
@@ -55,7 +85,12 @@
                     <li class="img-list">
                         <a href="" class="portfolio-link">
                             <div class="overley-portfolio">
-                                <img src="./images/tehnokrak.jpg" alt="tehnokrak" width="370">
+                                <picture>
+                                    <source srcset="./images/tehnokrak.jpg 1x, ./images/tehnokrak@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tab-tehnokrak.jpg 1x, ./images/tab-tehnokrak@2x.jpg 2x" media="(min-width: 768px)"/>
+                                    <source srcset="./images/mob-tehnokrak.jpg 1x, ./images/mob-tehnokrak@2x.jpg 2x" media="(min-width: 320px)"/>
+                                    <img src="./images/tehnokrak.jpg" alt="tehnokrak">
+                                </picture>
                                 <p class="overley-portfolio-link">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.
@@ -70,7 +105,13 @@
                     <li class="img-list">
                         <a href="" class="portfolio-link">
                             <div class="overley-portfolio">
-                                <img src="./images/new-orlean.jpg" alt="new orlean" width="370">
+                                <picture>
+                                    <source srcset="./images/new-orlean.jpg 1x, ./images/new-orlean@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tab-new-orlean.jpg 1x, ./images/tab-new-orlean@2x.jpg 2x" media="(min-width: 768px)"/>
+                                    <source srcset="./images/mob-new-orlean.jpg 1x, ./images/mob-new-orlean@2x.jpg 2x" media="(min-width: 320px)"/>
+                                    <img src="./images/new-orlean.jpg" alt="new orlean">
+                                </picture>
+                                
                                 <p class="overley-portfolio-link">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.
@@ -85,7 +126,13 @@
                     <li class="img-list">
                         <a href="" class="portfolio-link">
                             <div class="overley-portfolio">
-                                <img src="./images/seafood.jpg" alt="seafood" width="370">
+                                <picture>
+                                    <source srcset="./images/seafood.jpg 1x, ./images/seafood@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tab-seafood.jpg 1x, ./images/tab-seafood@2x.jpg 2x" media="(min-width: 768px)"/>
+                                    <source srcset="./images/mob-seafood.jpg 1x, ./images/mob-seafood.jpg 2x" media="(min-width: 320px)"/>
+                                    <img src="./images/seafood.jpg" alt="seafood">
+                                </picture>
+                                
                                 <p class="overley-portfolio-link">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.
@@ -100,7 +147,13 @@
                     <li class="img-list">
                         <a href="" class="portfolio-link">
                             <div class="overley-portfolio">
-                                <img src="./images/prime.jpg" alt="prime" width="370">
+                                <picture>
+                                    <source srcset="./images/prime.jpg 1x, ./images/prime@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tab-prime.jpg 1x, ./images/tab-prime@2x.jpg 2x" media="(min-width: 768px)"/>
+                                    <source srcset="./images/mob-prime.jpg 1x, ./images/mob-prime@2x.jpg 2x" media="(min-width: 320px)"/>
+                                    <img src="./images/prime.jpg" alt="prime">
+                                </picture>
+                                
                                 <p class="overley-portfolio-link">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.
@@ -115,7 +168,13 @@
                     <li class="img-list">
                         <a href="" class="portfolio-link">
                             <div class="overley-portfolio">
-                                <img src="./images/boxes.jpg" alt="boxes" width="370">
+                                <picture>
+                                    <source srcset="./images/boxes.jpg 1x, ./images/boxes@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tab-boxes.jpg 1x, ./images/tab-boxes@2x.jpg 2x" media="(min-width: 768px)"/>
+                                    <source srcset="./images/mob-boxes.jpg 1x, ./images/mob-boxes@2x.jpg 2x" media="(min-width: 320px)"/>
+                                    <img src="./images/boxes.jpg" alt="boxes">
+                                </picture>
+                                
                                 <p class="overley-portfolio-link">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.
@@ -130,7 +189,13 @@
                     <li class="img-list">
                         <a href="" class="portfolio-link">
                             <div class="overley-portfolio">
-                                <img src="./images/inspiration-no-borders.jpg" alt="inspiration-no-borders" width="370">
+                                <picture>
+                                    <source srcset="./images/inspiration-no-borders.jpg 1x, ./images/inspiration-no-borders@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tab-inspiration-no-borders.jpg 1x, ./images/tab-inspiration-no-borders@2x.jpg 2x" media="(min-width: 768px)"/>
+                                    <source srcset="./images/mob-inspiration-no-borders.jpg 1x, ./images/mob-inspiration-no-borders@2x.jpg 2x" media="(min-width: 320px)"/>
+                                    <img src="./images/inspiration-no-borders.jpg" alt="inspiration-no-borders">
+                                </picture>
+                                
                                 <p class="overley-portfolio-link">
                                 Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                 вичерпні відомості про компанію чи приватну особу.
@@ -145,7 +210,13 @@
                     <li class="img-list">
                         <a href="" class="portfolio-link">
                             <div class="overley-portfolio">
-                                <img src="./images/limited-edition.jpg" alt="limited edition" width="370">
+                                <picture>
+                                    <source srcset="./images/limited-edition.jpg 1x, ./images/limited-edition@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tab-limited-edition.jpg 1x, ./images/tab-limited-edition@2x.jpg 2x" media="(min-width: 768px)"/>
+                                    <source srcset="./images/mob-limited-edition.jpg 1x, ./images/mob-limited-edition@2x.jpg 2x" media="(min-width: 320px)"/>
+                                    <img src="./images/limited-edition.jpg" alt="limited edition">
+                                </picture>
+                                
                                 <p class="overley-portfolio-link">
                                 Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                 вичерпні відомості про компанію чи приватну особу.
@@ -160,7 +231,13 @@
                     <li class="img-list">
                         <a href="" class="portfolio-link">
                             <div class="overley-portfolio">
-                                <img src="./images/lab.jpg" alt="lab" width="370">
+                                <picture>
+                                    <source srcset="./images/lab.jpg 1x, ./images/lab@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tab-lab.jpg 1x, ./images/tab-lab@2x.jpg 2x" media="(min-width: 768px)"/>
+                                    <source srcset="./images/mob-lab.jpg 1x, ./images/mob-lab@2x.jpg 2x" media="(min-width: 320px)"/>
+                                    <img src="./images/lab.jpg" alt="lab">
+                                </picture>
+                                
                                 <p class="overley-portfolio-link">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.
@@ -175,7 +252,13 @@
                     <li class="img-list">
                         <a href="" class="portfolio-link">
                             <div class="overley-portfolio">
-                                <img src="./images/growing-business.jpg" alt="growing-business" width="370">
+                                <picture>
+                                    <source srcset="./images/growing-business.jpg 1x, ./images/growing-business@2x.jpg 2x" media="(min-width: 1200px)"/>
+                                    <source srcset="./images/tab-growing-business.jpg 1x, ./images/tab-growing-business@2x.jpg 2x" media="(min-width: 768px)"/>
+                                    <source srcset="./images/mob-growing-business.jpg 1x, ./images/mob-growing-business@2x.jpg 2x" media="(min-width: 320px)"/>
+                                    <img src="./images/growing-business.jpg" alt="growing-business">
+                                </picture>
+                                
                                 <p class="overley-portfolio-link">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.
@@ -190,22 +273,16 @@
                 </ul>
             </div>
         </section>
-
     </main>
     <footer class="footer">
         <div class="footer-container container">
             <div class="footer-container-list">
-                <a href="./index.html" lang="en" class="footer-logo"><span class="navigation-logo_link">Web</span><span
-                        class="footer-link">Studio</span></a>
+                <a href="./index.html" lang="en" class="footer-logo"><span class="navigation-logo_link">Web</span><span class="footer-link">Studio</span></a>
                 <address class="address">
-                    <ul>
-                        <li class="footer-list list">
-                            <p class="footer-address">м. Києв, пр-т Лесі Українки, 26</p>
-                        </li>
-                        <li class="footer-list list"><a href="e-mail:info@devstudio.com"
-                                class="address-mail">info@devstudio.com</a><br /></li>
-                        <li class="footer-list list"><a href="tel:+380961111111" class="address-tel">+38 096 111 11 11</a>
-                        </li>
+                    <ul> 
+                        <li class="footer-list list"><p class="footer-address">м. Києв, пр-т Лесі Українки, 26</p></li>
+                        <li class="footer-list list"><a href="e-mail:info@devstudio.com" class="address-mail">info@devstudio.com</a><br /></li>
+                        <li class="footer-list list"><a href="tel:+380961111111" class="address-tel">+38 096 111 11 11</a></li>
                     </ul>
                 </address>
             </div>
@@ -246,7 +323,7 @@
                 <form class="form-email">
                     <h3 class="form-title">ПІДПИШИСЬ НА СПОВІЩЕННЯ</h3>
                     <div class="model-footer-email">
-                        <input type="email" name="email" class="footer-email" placeholder="E-mail" />
+                        <input type="email" name="email" class="footer-email" placeholder="E-mail"/>
                         <button type="submit" class="button footer-but">Підписатися
                             <svg class="modal-icon-foter" width="24" height="24">
                                 <use href="./images/icons.svg.svg#icon-icon-send"></use>
@@ -256,4 +333,6 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
 </body>
