@@ -40,7 +40,6 @@ ol {
 
 img {
   display: block;
-  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -183,13 +182,33 @@ img {
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0px auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 738px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-title {
@@ -212,8 +231,8 @@ img {
   border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mob-header.jpg");
   background-repeat: no-repeat;
@@ -272,6 +291,8 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img-hero.jpg");
   }
 }
@@ -298,16 +319,9 @@ img {
   clip: rect(0 0 0 0);
 }
 
-.portfolio {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 60px 15px 40px 15px;
-}
-
 .portfolio-container {
   display: flex;
   flex-wrap: wrap;
-  text-align: left;
   justify-content: center;
 }
 
@@ -315,10 +329,11 @@ img {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .list-button {
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
 .portfolio-img {
@@ -390,24 +405,19 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .portfolio {
-    width: 768px;
-  }
   .portfolio-container {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
     justify-content: center;
   }
   .portfolio-list {
-    margin-bottom: 14px;
+    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
   }
   .portfolio-img {
     display: flex;
     flex-wrap: wrap;
-    width: 738px;
   }
   .img-list {
     width: calc((100% - 60px) / 2);
@@ -417,11 +427,8 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .portfolio {
-    width: 1200px;
-  }
-  .portfolio-img {
-    width: 1170px;
+  .portfolio-list {
+    margin-bottom: 34px;
   }
   .img-list {
     width: calc((100% - 90px) / 3);
@@ -491,6 +498,7 @@ header {
   top: 0;
   left: 0;
   width: 100vw;
+  height: 100vh;
   z-index: 2;
   background-color: #ffffff;
   overflow: auto;
@@ -498,12 +506,6 @@ header {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
-@media screen and (min-width: 480px) {
-  .menu {
-    width: 480px;
-    margin: 0 auto;
-  }
 }
 
 .menu.is-hidden {
@@ -706,20 +708,12 @@ a.mob-button-border::after {
     margin-bottom: 0px;
   }
 }
-.aside {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 60px auto;
-}
-
-.aside-quality {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
 .aside-text {
+  text-align: center;
   list-style: none;
+}
+.aside-text p {
+  text-align: left;
 }
 .aside-text:not(:last-child) {
   margin-bottom: 30px;
@@ -735,7 +729,7 @@ a.mob-button-border::after {
 }
 
 .aside-title {
-  padding-bottom: 10px;
+  margin: 0px auto 10px;
   color: var(--title-text-color);
   font-weight: bold;
   font-size: 14px;
@@ -747,15 +741,7 @@ a.mob-button-border::after {
   display: none;
 }
 
-@media screen and (min-width: 480px) {
-  .aside {
-    width: 450px;
-  }
-}
 @media screen and (min-width: 768px) {
-  .aside {
-    width: 738px;
-  }
   .aside-list {
     display: flex;
     text-align: center;
@@ -770,12 +756,6 @@ a.mob-button-border::after {
   }
 }
 @media screen and (min-width: 1200px) {
-  .aside {
-    width: 1170px;
-    padding-top: 94px;
-    padding-bottom: 94px;
-    margin-bottom: 0px;
-  }
   .aside-list {
     display: flex;
     text-align: center;
@@ -793,8 +773,6 @@ a.mob-button-border::after {
     display: block;
     width: 1170px;
     padding-bottom: 94px;
-    margin-left: auto;
-    margin-right: auto;
   }
   .products-title {
     margin-bottom: 50px;
@@ -836,9 +814,6 @@ a.mob-button-border::after {
 .team {
   background-color: #f5f4fa;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 60px 15px;
 }
 
 .list {
@@ -879,8 +854,10 @@ a.mob-button-border::after {
 
 .social {
   display: flex;
+  text-align: center;
   justify-content: space-between;
-  margin-top: 16px;
+  width: 206px;
+  margin: 16px auto 0px;
 }
 
 .social__link {
@@ -898,22 +875,13 @@ a.mob-button-border::after {
   background-color: var(--accent-color);
 }
 
-@media screen and (min-width: 480px) {
-  .team {
-    width: 450px;
-  }
-}
 @media screen and (min-width: 768px) {
-  .team {
-    width: 738px;
-  }
   .commands {
     display: flex;
     text-align: center;
     flex-wrap: wrap;
   }
   .commands-list {
-    text-align: left;
     width: calc((100% - 30px) / 2);
   }
   .commands-list:nth-child(2n+1) {
@@ -921,17 +889,11 @@ a.mob-button-border::after {
   }
 }
 @media screen and (min-width: 1200px) {
-  .team {
-    width: 1170px;
-    padding: 94px 0px;
-  }
   .commands {
     display: flex;
-    flex-basis: calc(100% - 120px)/4;
   }
   .commands-list {
-    width: 270px;
-    margin-bottom: 0px;
+    width: calc((100% - 120px) / 4);
   }
   .commands-list:not(:nth-child(4n)) {
     margin-right: 30px;
@@ -977,29 +939,14 @@ a.mob-button-border::after {
   fill: #2196f3;
 }
 
-@media screen and (min-width: 480px) {
-  .partners {
-    width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 @media screen and (min-width: 768px) {
-  .partners {
-    width: 738px;
-  }
   .customers__list {
-    width: calc((100% - 30px) / 3);
+    width: calc((100% - 60px) / 3);
   }
 }
 @media screen and (min-width: 1200px) {
-  .partners {
-    width: 1170px;
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
   .customers__list {
-    width: 170px;
+    width: calc((100% - 180px) / 6);
   }
 }
 .backdrop {

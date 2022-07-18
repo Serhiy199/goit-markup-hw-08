@@ -39,32 +39,16 @@
     }
 }
 
-@media screen and (min-width: 480px) {
-    .partners{
-        width: 450px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
 
 @media screen and (min-width: 768px) {
-    .partners{
-        width: 738px;
-    }
 
     .customers__list {
-        width: calc(( 100% - 30px ) / 3);
+        width: calc(( 100% - 60px ) / 3);
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .partners {
-        width: 1170px;
-        padding-top: 94px;
-        padding-bottom: 94px;
-    }
-
     .customers__list {
-        width: 170px;
+        width: calc(( 100% - 180px ) / 6);
     }
 }
