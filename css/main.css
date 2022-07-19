@@ -514,11 +514,8 @@ header {
 }
 
 .mobile-menu {
-  padding: 48px 40px;
-}
-
-.mob-comtainet {
   position: relative;
+  padding: 48px 40px;
 }
 
 .mob-nav {
@@ -589,6 +586,7 @@ a.mob-button-border::after {
   list-style: none;
   display: flex;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .mob-social__list {
