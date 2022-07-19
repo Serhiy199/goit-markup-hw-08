@@ -6,7 +6,6 @@
     height: 100vh;
     z-index: 2;
     background-color: #ffffff;
-
     
     overflow: auto;
 
@@ -15,6 +14,7 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    
 }
 
 .menu.is-hidden {
@@ -24,6 +24,11 @@
 }
 
 .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    overflow: auto;
     position: relative;
     padding: 48px 40px;
 }
@@ -71,7 +76,6 @@ a.mob-button-border {
 
 
 .mob-contacts-tel {
-    margin-top: 302px;
     margin-bottom: 32px;
 }
 
@@ -86,7 +90,7 @@ a.mob-button-border {
     color: #2196F3;
 }
 
-.mob-contacts-mail{
+.mob-contacts-mail {
     margin-bottom: 64px;    
 }
 .mob-contacts-mail__ling {

@@ -23,7 +23,10 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    margin-bottom: 30px;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
 }
 
 .commands-list__name {
@@ -84,6 +87,10 @@
         &:nth-child(2n + 1) {
             margin-right: 30px;
         }
+
+        &:nth-last-child(-n + 2)  {
+            margin-bottom: 0px;
+        }
     }
 }
 
@@ -99,6 +106,10 @@
         &:not(:nth-child(4n)) {
             margin-right: 30px;
             
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0px;
         }
     }
 

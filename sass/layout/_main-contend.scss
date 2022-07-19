@@ -48,6 +48,10 @@
         &:nth-child(2n + 1) {
             margin-right: 30px;
         }
+
+        &:nth-last-child(-n + 2)  {
+            margin-bottom: 0px;
+        }
     }
 }
 
@@ -72,7 +76,10 @@
     .products-section {
         display: block;
         width: 1170px;
+        padding-left: 15px;
+        padding-right: 15px;
         padding-bottom: 94px;
+        margin: 0px auto;
     }
 
     .products-title {

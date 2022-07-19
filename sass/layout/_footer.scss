@@ -1,7 +1,4 @@
 .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-
     background-color: #2f303a;
     font-style: normal;
 
@@ -158,7 +155,7 @@
 @media screen and (min-width: 480px) {
 
     .footer-email {
-        width: 450px;
+        max-width: 450px;
     }
 
     .model-footer-email {
@@ -197,8 +194,8 @@
 @media screen and (min-width: 1200px) {
     .footer {
         
-        margin-left: auto;
-        margin-right: auto;
+        // margin-left: auto;
+        // margin-right: auto;
     }
     .footer-container {
         max-width: 1170px;
@@ -206,6 +203,8 @@
         justify-content: flex-start;
         flex-wrap: nowrap;
         align-items: baseline;
+
+        
     }
 
     .footer-logo {
@@ -214,6 +213,7 @@
     }
 
     .footer-container-list{
+        margin-bottom: 0px;
         text-align: left;
     }
     .footer-icon-link {
@@ -222,6 +222,10 @@
 
     .footer-list:not(:first-child) {
         margin-top: 9px;
+    }
+
+    .footer-title {
+        text-align: left;
     }
 
     .footer-email {
