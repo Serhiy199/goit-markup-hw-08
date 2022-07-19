@@ -339,6 +339,9 @@ img {
   margin-right: auto;
 }
 
+.img-list {
+  max-width: 450px;
+}
 .img-list:not(:last-child) {
   margin-bottom: 30px;
 }
